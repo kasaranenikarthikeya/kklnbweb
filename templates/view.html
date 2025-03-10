@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stored Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Submitted Data</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.Name }}</td>
+                <td>{{ row.Email }}</td>
+                <td>{{ row.Message }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
